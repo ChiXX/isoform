@@ -1,0 +1,10 @@
+dataset,N_round,performance,features
+normal/transcripts,1,0.7252832780069055,2222
+normal/transcripts,2,0.7739836246075171,1066
+normal/transcripts,3,0.7975831550227964,619
+normal/transcripts,4,0.8110611701953635,506
+normal/transcripts,5,0.8087387410315858,314
+normal/transcripts,6,0.8227029594833605,254
+normal/transcripts,7,0.8355797026371964,178
+normal/transcripts,8,0.8463278734711444,178
+normal/transcripts,9,0.8493700922279572,184
