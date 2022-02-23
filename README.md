@@ -82,6 +82,8 @@ A2: The StringTie merge function. Without -e option, StringTie generates pre-ass
 
 **Ensemble method:** In`script/pre_selection.py`,   a **customized selection model** using the elastic net penalized cox model as the based learner is designed, to processing ultra-high dimensional data.
 
+The selected feature lists are named `label-best.feature`
+
 ### Ensemble method
 
 ![image-20220223153135811](mdFigs/ens.png)
@@ -94,7 +96,23 @@ In order to prevent overfitting, the samples with true events and false events a
 
 ## RESULTS
 
+### RFi (recurrence-free interval) prediction
 
+![image-20220223154734872](mdFigs/RFi.png)
 
+All feature selection methods give a better performance than baseline, especially the two red lines from de novo gene set and the blue line using transcripts dataset.
 
+### RFS (relapse-free survival) prediction
+
+![image-20220223155001120](mdFigs/RFS.png)
+
+Performance on gene set and transcript set is close. The feature sets selected by the univariate method (the green lines) are considerably better than baseline and others.
+
+## Conclusion
+
+* It is possible to use transcript expression levels to predict the patient outcome, but the collinearity is an issue
+* Univariate method is a good tool to select the features and can be a good method to reduce the redundancy
+* For survival analysis, good quality of labels is the key to a successful prediction
+* When processing ultra-high-dimensional data, the one-run method is unstable sometimes which can not select the feature efficiently 
+* This project forms a basis for further work on the development of predictive signatures for breast cancer patient outcome
 
