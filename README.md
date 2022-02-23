@@ -88,7 +88,7 @@ A2: The StringTie merge function. Without -e option, StringTie generates pre-ass
 
 When processing ultra-high-dimensional data, the high-lasso-ratio elastic net method becomes unstable. That is why we want to use the idea of the ensemble method to avoid this issue. Firstly, the features are **randomly** split into **m** groups, where **m** is based on the number of features **n** divided by the number of samples **p**. This “square” data then is inputted into the base learner which consists of 90% LASSO and 10% Ridge. Each base learner carries out a selection and is adjusted by age and treatment, summarizing all the results from all the base learners. One round selection is finished. To cover the combination of features split into a random subgroup as more as possible, this selection needs to be repeated k times. After collecting all the selected features from k iterations, **the feature-selected frequency** is counted. A cutoff is defined by the ratio of the maximum frequency, which is considered to be a hyper-parameter and can be used to improve the performance of model.
 
-![image-20220223153628157](/data/xu_data/isoform/mdFigs/overfitting.png)
+![image-20220223153628157](mdFigs/overfitting.png)
 
 In order to prevent overfitting, the samples with true events and false events are split into five folds respectively with a global fixed random status to make each base learner comparable. And to deal with unbalanced data, the false events in each fold are randomly excluded to end up with the same number of events as the corresponding true events fold. This random undersampling is performed for each base learner to make the best use of all the false-event samples. 
 
